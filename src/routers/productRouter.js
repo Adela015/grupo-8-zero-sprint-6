@@ -22,8 +22,6 @@ var upload = multer({ storage: storage });
 
 router.get('/productCart',authMiddleware, productController.productCart) //http://localhost:3000/products/productCart
 
-router.get('/productDetail', productController.productDetail); //http://localhost:3000/products/productDetail
-
 router.get('/productList', productController.productList); //http://localhost:3000/products/productList
 
 router.get('/productAdd',authMiddleware,adminMiddleware , productController.productAdd);//http://localhost:3000/products/productAdd

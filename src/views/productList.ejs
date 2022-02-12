@@ -21,7 +21,8 @@
     <div><h4 class="catalogo">Catálogo</h4></div>
 
 <!-----------------------------FILTROS----------------------------->
-
+<main class="contenedor-principal">
+    <section class="contenedor-filtro">
 <div id="filtros">
     <h2 class="filtros">Filtros</h2>
     <br>
@@ -69,47 +70,39 @@
     <input type="range" name="rango">
     <br>
 </div> 
+</section>
 
 
 
 <!----------------------------------------CARDS DE RECOMENDADOS------------------------------------------->
-
-<div>
-
+<section class="contenedor-cards">
+    <div class="mas-vendidos">
     <% for(let producto of productos){ %>
-    <section class="mas-vendidos">
         <article class="mas-vendidos-album">
             <a href="/products/productDetail/<%=producto.id%>"><img class="mas-vendidos-album-img" src="/images/albumes/<%=producto.image%>" alt="Álbum - I'm Home"></a>
             <h5 class="album-title"><%=producto.name%></h5>
             <h5 class="album-title2"><%=producto.artist%></h5>
-            <h5 class="album-title2"><%=producto.category%> </h5>
-
+            <h5 class="album-title2">(<%=producto.category%>)</h5>
                 <p class="album-price"> $ <%=mil(producto.price)%><a href="/products/wishList"><i class="fas fa-heart"></i></a></p>
                 <div>
                     <button type="submit" class="boton-carrito"> <a href="/products/productCart"> Agregar al carrito</a></button>
                 </div>
-
         </article>
-    </section>
     <%} %> 
 </div>
+</section>
 
 
 <!------------------------------LISTA DE NÚMEROS----------------------------->
-
+<section class="contenedor-numeros">
 <div class="lista-numerica">
     <a href="/products/productList"><i class="fas fa-chevron-left"></i></a>
         <a href="/products/productList">1</a>
         <!-- <a href="/products/productList2">2</a> -->
     <a href="#"><i class="fas fa-chevron-right"></i></a>
 </div>
-
-<!---------------------------AGREGAR O EDITAR PRODUCTOS--------------------------------->
-
-<!-- <div class="contenedor-addproduct">
-    <a class="addproduct" href="/products/productAdd">Agregar producto</a>
-</div> -->
-
+</section>
+</main>
 <!---------------------------------------FOOTER----------------------------------------->
 
 <%- include ('./partials/footer') %> 

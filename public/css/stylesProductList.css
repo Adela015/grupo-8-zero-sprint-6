@@ -112,6 +112,21 @@ i.fa-sign-out-alt{
     display: none;
 }
 
+/*---------GRACIAS A ESTO, LAS CARDS POR FIN VAN A ESTAR BIEN-----*/
+.contenedor-principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedor-filtro{
+    width: 15%;
+}
+.contenedor-cards{
+    width: 85%;
+}
+.contenedor-numeros{
+    width: 100%;
+}
+
 /*-------------------FILTROS---------------*/
 
 #filtros{
@@ -198,9 +213,8 @@ article h5.album-title2{
 
 .mas-vendidos{
     display: flex;
-    flex-direction: column;
-    margin-top: 5%;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 85%;
 }
 
 
@@ -507,25 +521,12 @@ div.social-media{
         text-align: center;
     }
 
-    section .mas-vendidos{
-        display: flex;
-        align-items: center;
-    }
-
-
-    .mas-vendidos{
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        top: 50px;
-    }
-
     section .mas-vendidos h2{
         align-items: center;
     }
 
     .mas-vendidos-album{
-        width: 35%;
+        width: 15%;
     }
 
     .recomendados-album{

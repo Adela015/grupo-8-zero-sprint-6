@@ -173,5 +173,15 @@
   "avatar": "1643841834049_img_.jpg",
   "isAdmin": true,
   "id": 18
+ },
+ {
+  "nombre": "gato",
+  "apellido": "gato",
+  "email": "gato@gmail.com",
+  "contraseña": "$2a$10$CXvPFE.fnWSDYpFW/4RyGOoswZYHz.iNqE1lMgyuKFVmHYkIIKCfu",
+  "fecha": "2022-02-09",
+  "avatar": "1644672716722_img_.jpg",
+  "isAdmin": false,
+  "id": 19
  }
 ]

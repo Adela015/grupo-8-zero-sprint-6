@@ -1,3 +1,4 @@
+const { log } = require('console');
 const req = require('express/lib/request');
 const path = require('path');
 const jsonDB = require ('../model/jsonDatabase');
@@ -21,6 +22,8 @@ const productController = {
         res.render('./products/productEdit2',{producto})
     }, 
     create:(req,res) => {
+        console.log('----------------------------');
+        console.log(req.body.category);
         let producto ={
             name: req.body.name,
             artist: req.body.artist,
@@ -37,6 +40,7 @@ const productController = {
         let id = req.params.id;
         let producto = productModel.find(id);
         let productos = productModel.all();
+        console.log(req.session.userLogged)
         res.render('./products/productDetail',{producto,mil:toThousand,productos:productos})
     },
     editarAccion:(req,res) => {

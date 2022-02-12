@@ -1,12 +1,11 @@
 [
  {
+  "id": "1",
   "name": "Comme ma mère",
   "artist": "Lyms ft. Kanoe",
-  "genre": "ryb",
   "description": "Primer álbum",
-  "price": 3200,
-  "image": "img-1643639196697.jpg",
-  "id": 1
+  "price": 5000,
+  "image": "img-1644671412169.jpg"
  },
  {
   "name": "Face",
@@ -25,5 +24,42 @@
   "price": 2000,
   "image": "img-1643843811225.jfif",
   "id": 3
+ },
+ {
+  "name": "dsd",
+  "artist": "dsdsd",
+  "genre": "rock",
+  "description": "ddd",
+  "price": 41555,
+  "image": "img-1644677837832.jpg",
+  "id": 4
+ },
+ {
+  "name": "asdsad",
+  "artist": "adsdds",
+  "genre": "clasica",
+  "description": "fvdsfdsfs",
+  "price": 2000,
+  "image": "img-1644678554633.jpg",
+  "id": 5
+ },
+ {
+  "name": "fhf",
+  "artist": "gfgdg",
+  "genre": "folk",
+  "description": "dfffdfd",
+  "price": 1122,
+  "image": "img-1644678727134.jpg",
+  "id": 6
+ },
+ {
+  "name": "From Now On",
+  "artist": "SHINee",
+  "genre": "kpop",
+  "category": "cassette",
+  "description": "ggfdg",
+  "price": 20000,
+  "image": "img-1644679022035.jpg",
+  "id": 7
  }
 ]

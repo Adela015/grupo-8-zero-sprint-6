@@ -28,7 +28,7 @@
 <!------------------------------ENLACES-------------------------------------->
 
 <div id="ruta">
-    <a href="/" class="inicio"> Home </a><i class="fas fa-chevron-right"></i><a> <%=producto.name%> - <a><%=producto.artist%></a></a>
+    <a href="/" class="inicio"> Home </a><i class="fas fa-chevron-right"> </i><a> <%=producto.genre%> <i class="fas fa-chevron-right"></i> <%=producto.name%> - <a> <%=producto.artist%></a></a>
 </div>
 
 <!-------------------------------POLAROID--------------------------------->
@@ -43,6 +43,8 @@
     <p class="parrafo1"><%=producto.name%></p>
     <br>
     <p class="parrafo2"><%=producto.artist%></p>
+    <br>
+    <p class="parrafo2">(<%=producto.category%>)</p>
     <br>
     <p class="precio"> $ <%=mil(producto.price)%></p>
 </div>
