@@ -61,5 +61,15 @@
   "price": 20000,
   "image": "img-1644679022035.jpg",
   "id": 7
+ },
+ {
+  "name": "Prueba",
+  "artist": "Ejemplo",
+  "genre": "rock",
+  "category": "vinilo",
+  "description": "lorem ipsu",
+  "price": 2000,
+  "image": "img-1644821346088.jpg",
+  "id": 8
  }
 ]

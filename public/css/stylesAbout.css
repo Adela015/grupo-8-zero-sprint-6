@@ -382,6 +382,19 @@ div p.texto img{
     height: 100%;
 }  */
 
+
+/*-----------------MEDIA QUERIE EXTRA PARA OCULTAR BUTTONS----------------*/ 
+
+@media (max-width:767px ) {
+    i.fa-plus-circle,
+    i.fa-user-circle,
+    i.fa-address-card,
+    i.fa-sign-out-alt{
+        display: none;
+    }
+}
+
+
 /*----------MEDIA QUERIES DESKTOP-------*/
 
 @media screen and (min-width: 768px){

@@ -113,9 +113,13 @@ i.fa-sign-out-alt{
 }
 
 /*---------GRACIAS A ESTO, LAS CARDS POR FIN VAN A ESTAR BIEN-----*/
+
+
 .contenedor-principal{
     display: flex;
     flex-wrap: wrap;
+    justify-content:center
+    
 }
 .contenedor-filtro{
     width: 15%;
@@ -143,10 +147,11 @@ div h4.catalogo {
     border-bottom: 8px solid #e0218a;
 }
 
-div section article {
+div article {
     margin: 10px 0px;
     box-shadow: 3px 5px 20px #807d7d;
     border-top: 1px #ccc9c9 solid;
+    
 }
 
 .boton-carrito{
@@ -167,7 +172,7 @@ div section article {
 }
 
 article h5.album-title{
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
     padding: 5px;
     margin: 0px;
@@ -176,7 +181,7 @@ article h5.album-title{
 }
 
 article h5.album-title2{
-    font-size: 28px;
+    font-size: 18px;
     text-align: center;
     padding: 5px;
     margin: 0px;
@@ -184,14 +189,25 @@ article h5.album-title2{
     font-weight: 500;
 }
 
-.album-price{
-    font-size: 32px;
+article h5.album-title3{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    margin: 0px;
+    padding-bottom: 20px;
     font-weight: 500;
-    position: relative;
+}
+
+
+p .album-price{
+    font-size: 22px;
+    font-weight: 500;
+    /* position: relative;
     left: 6%;
     margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 50px; */
     padding-bottom: 20px;
+    
 }
 
 .boton-carrito{
@@ -211,10 +227,14 @@ article h5.album-title2{
     align-self: center;
 }
 
+
+
 .mas-vendidos{
     display: flex;
     flex-wrap: wrap;
-    width: 85%;
+    width: 100%;
+    justify-content: space-between;
+    
 }
 
 
@@ -222,15 +242,23 @@ article h5.album-title2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 25px;
+    margin: 30px 25px ;
+    box-shadow: 3px 5px 20px #807d7d;
+    border: red dotted 1px;
+}
+
+article.mas-vendidos{
+    margin: auto;
 }
 
 .mas-vendidos-album-img{
     width: 75%;
     height: auto;
-    margin-left: 12%;
+    
     padding: 30px 0px;
 }
+
+
 
 p.album-price i {
     padding-left: 70px 50px 40px;
@@ -421,6 +449,8 @@ section h3{
 
 section article a{
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 div.social-media{
@@ -455,6 +485,20 @@ div.social-media{
     transition-property: all;
     transition-duration: 200ms;
 }
+
+/*-----------------MEDIA QUERIE EXTRA PARA OCULTAR BUTTONS----------------*/ 
+
+@media (max-width:767px ) {
+    i.fa-plus-circle,
+    i.fa-user-circle,
+    i.fa-address-card,
+    i.fa-sign-out-alt{
+        display: none;
+    }
+}
+
+
+
 /*---------------------MEDIA QUERIES DEKTOP--------------------*/
 
 @media (min-width: 768px) {
@@ -494,11 +538,6 @@ div.social-media{
         margin: 0px 15px;
     }
 
-    .fa-angrycreative{
-        color: white;
-        font-size: 30px;
-        margin: 0px 15px;
-    }
 
     .fa-address-card{
         color: white;
@@ -526,11 +565,11 @@ div.social-media{
     }
 
     .mas-vendidos-album{
-        width: 15%;
+        width: 25%;
     }
 
-    .recomendados-album{
-        width: 35%;
+    h5{
+        font-size: 25;
     }
 
     .ver-mas{
@@ -683,11 +722,11 @@ div.social-media{
         margin-top: -26%;
         margin-bottom: -5%;
     }
-    article.mas-vendidos-album p.album-price{
+    /* article.mas-vendidos-album p.album-price{
         font-size: 45px;
         position: relative;
         left: 2%;
-    }
+    } */
     button.boton-carrito{
         position: relative;
         top: -20px;
@@ -699,7 +738,7 @@ div.social-media{
         font-size: 25px;
     }
     div section article.mas-vendidos-album p.album-price a i.fa-heart{
-        font-size: 50px;
+        font-size: 30px;
         position: relative;
         top: -50%;
         right: 5%;
@@ -721,7 +760,7 @@ div.social-media{
 
 /*-----------------------------MEDIA QUERIES MOBILE-------------------------*/
 
-@media screen and (min-width: 450px) {
+/* @media screen and (min-width: 450px) {
 
     article p.album-price a i.fa-heart{
         font-size: 50px;
@@ -741,12 +780,12 @@ div.social-media{
         font-size: 23px;
     }
     p.album-price{
-        font-size: 45px;
+        font-size: 25px;
         position: relative;
         left: 15%;
     }
     article p.album-price{
-        font-size: 45px;
+        font-size: 25px;
         position: relative;
         left: 7.8%;
     }
@@ -759,4 +798,4 @@ div.social-media{
         font-size: 30px;
     }
 }
-
+ */
