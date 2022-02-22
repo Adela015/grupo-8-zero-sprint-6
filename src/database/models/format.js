@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Format.hasMany(models.Products,{
+        foreignKey: 'IDformat',
+        as: 'Products'
+      });
     }
   }
   Format.init({
