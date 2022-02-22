@@ -183,5 +183,15 @@
   "avatar": "1644672716722_img_.jpg",
   "isAdmin": false,
   "id": 19
+ },
+ {
+  "nombre": "Leandro",
+  "apellido": "Marino",
+  "email": "leandro@zero.com",
+  "contraseña": "$2a$10$Vou4mZNUBHaWglGM.ZuEHuulZN7qIOBsqcBh1UIpxWUakjuu7xf9C",
+  "fecha": "2022-02-10",
+  "avatar": "1645465307222_img_.jpg",
+  "isAdmin": true,
+  "id": 20
  }
 ]
