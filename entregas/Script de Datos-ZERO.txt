@@ -228,7 +228,46 @@ Crear todas las relaciones correpondientes
 
 AHORA HAY QUE AGREGAR LAS CLAVES FORANEAS A LAS  MIGRACIONES
 
+MIGRACION PRODUCT
 
+       IDgenre: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Categories',
+          key: 'id'
+        }
+      },
+      IDformat: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Format',
+          key: 'id'
+        }
+      },
+      ID_category: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Category',
+          key: 'id'
+        }
+      },
+      IDImages: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Images',
+          key: 'id'
+        }
+      }
+
+MIGRACIONES USERS
+
+      roles_ID: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Roles',
+          key: 'id'
+        }
+      }
 
 
 CREAR LA MIGRACION Y CREACION DE LAS TABLAS

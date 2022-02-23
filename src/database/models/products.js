@@ -11,17 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Products.belongsTo(models.Categories,{
+      Products.belongsTo(models.Genre,{
         foreignKey:'IDgenre',
-        as: 'Categories'
+        as: 'Genre'
       }),
       Products.belongsTo(models.Format,{
         foreignKey:'IDformat',
         as: 'Format'
       }),
-      Products.belongsTo(models.Category,{
+      Products.belongsTo(models.Categories,{
         foreignKey:'ID_category',
-        as: 'Category'
+        as: 'Categories'
       }),
       Products.belongsTo(models.Images,{
         foreignKey:'IDImages',

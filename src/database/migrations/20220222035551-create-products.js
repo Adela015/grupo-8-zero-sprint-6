@@ -33,16 +33,32 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       IDgenre: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Genres',
+          key: 'id'
+        }
       },
       IDformat: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Format',
+          key: 'id'
+        }
       },
       ID_category: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Categories',
+          key: 'id'
+        }
       },
       IDImages: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Images',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
