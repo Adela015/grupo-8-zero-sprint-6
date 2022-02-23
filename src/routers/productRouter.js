@@ -20,13 +20,13 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 
-router.get('/productCart',authMiddleware, productController.productCart) //http://localhost:3000/products/productCart
+// router.get('/productCart',authMiddleware, productController.productCart) //http://localhost:3000/products/productCart
 
-router.get('/productList', productController.productList); //http://localhost:3000/products/productList
+// router.get('/productList', productController.productList); //http://localhost:3000/products/productList
 
-router.get('/productAdd',authMiddleware,adminMiddleware , productController.productAdd);//http://localhost:3000/products/productAdd
+// router.get('/productAdd',authMiddleware,adminMiddleware , productController.productAdd);//http://localhost:3000/products/productAdd
 
-router.get('/wishList',authMiddleware, productController.wishList);//http://localhost:3000/products/wishList
+// router.get('/wishList',authMiddleware, productController.wishList);//http://localhost:3000/products/wishList
 
 //Editar productos
 
@@ -36,12 +36,12 @@ router.put('/productEdit/:id',upload.single("productImage"), productController.e
 
 router.post('/productAdd',upload.single("image"), productController.create);
 
-router.get('/productDetail/:id',productController.productDetail);
+// router.get('/productDetail/:id',productController.productDetail);
 
-router.get('/productEdit',adminMiddleware,productController.alls);
+// router.get('/productEdit',adminMiddleware,productController.alls);
 
-router.get('/productList',productController.productList);
+// router.get('/productList',productController.productList);
 
-router.delete('/borrar/:id',adminMiddleware,productController.delete);
+// router.delete('/borrar/:id',adminMiddleware,productController.delete);
 
 module.exports = router;

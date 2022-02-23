@@ -1,8 +1,9 @@
 const { log } = require('console');
 const req = require('express/lib/request');
 const path = require('path');
-const jsonDB = require ('../model/jsonDatabase');
-const productModel = jsonDB('products');
+// const jsonDB = require ('../model/jsonDatabase');
+// const productModel = jsonDB('products');
+let db = require("../database/models");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
@@ -24,16 +25,19 @@ const productController = {
     create:(req,res) => {
         console.log('----------------------------');
         console.log(req.body.category);
-        let producto ={
-            name: req.body.name,
-            artist: req.body.artist,
-            genre: req.body.genre,
-            category: req.body.category,
-            description: req.body.description,
-            price: Number(req.body.price),
-            image: req.file.filename
-        };
-        productModel.create(producto);
+        db.products.create({
+            
+        })
+        // let producto ={
+        //     name: req.body.name,
+        //     artist: req.body.artist,
+        //     genre: req.body.genre,
+        //     category: req.body.category,
+        //     description: req.body.description,
+        //     price: Number(req.body.price),
+        //     image: req.file.filename
+        // };
+        // productModel.create(producto);
         res.redirect("/products/productList");
     },
     detail:function (req,res) {
