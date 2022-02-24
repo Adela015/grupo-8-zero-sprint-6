@@ -8,9 +8,11 @@ npm i express
 npm i dotenv
 npm i sequelize mysql2
 npm i --save -dev nodemon
+npm list -g 
 
 Dependencias a instalar de Desarrollo:
 npm i sequelize-cli --D
+npm i sequelize-cli -g  
 
 Crear en la raiz del proyecto los siguientes archivos:
 .gitignore ( para ignorar los archivos de Git). 
@@ -187,9 +189,9 @@ Crear todas las relaciones correpondientes
 ----------------------- Products --------------------
 
     static associate(models) {
-      Products.belongsTo(models.Categories,{
+      Products.belongsTo(models.Genres,{
         foreignKey:'IDgenre',
-        as: 'Categories'
+        as: 'Genres'
       }),
 
       Products.belongsTo(models.Format,{

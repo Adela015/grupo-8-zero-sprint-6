@@ -26,7 +26,13 @@ const productController = {
         console.log('----------------------------');
         console.log(req.body.category);
         db.products.create({
-            
+            name: req.body.name,
+            artist: req.body.artist,
+            genre: req.body.genre,
+            category: req.body.category,
+            description: req.body.description,
+            price: Number(req.body.price),
+            image: req.file.filename
         })
         // let producto ={
         //     name: req.body.name,
