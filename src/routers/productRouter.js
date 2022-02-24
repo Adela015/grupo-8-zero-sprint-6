@@ -24,7 +24,7 @@ var upload = multer({ storage: storage });
 
 // router.get('/productList', productController.productList); //http://localhost:3000/products/productList
 
-// router.get('/productAdd',authMiddleware,adminMiddleware , productController.productAdd);//http://localhost:3000/products/productAdd
+router.get('/productAdd',authMiddleware,adminMiddleware , productController.productAdd);//http://localhost:3000/products/productAdd
 
 // router.get('/wishList',authMiddleware, productController.wishList);//http://localhost:3000/products/wishList
 

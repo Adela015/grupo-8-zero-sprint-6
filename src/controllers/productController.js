@@ -90,7 +90,13 @@ const productController = {
     },
 
     productAdd:(req,res) => {
-        res.render('productAdd');
+        // db.genres.findAll()
+        //     .then(function(genres) {
+        //         return res.render('productAdd', {genres:genres})
+        //     })
+
+        res.render('productAdd')
+        
     },
     wishList:(req,res) => {
         res.render('wishList');
