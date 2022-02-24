@@ -11,4 +11,6 @@ router.get('/newsLetter', mainController.newsLetter); //http://localhost:3000/ne
 
 router.get('/profile', mainController.profile); //http://localhost:3000/newsLetter
 
+router.get('/profileEdit', mainController.profileEdit);
+
 module.exports = router;

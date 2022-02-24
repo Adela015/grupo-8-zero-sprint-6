@@ -13,6 +13,9 @@ const mainController = {
     },
     profile: (req,res) => {
         res.render('profile');
+    },
+    profileEdit: (req,res) => {
+        res.render('profileEdit');
     }
 }
 
