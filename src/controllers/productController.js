@@ -72,10 +72,7 @@ const productController = {
         productModel.delete(req.params.id);
         res.redirect("/products/productList");
     },
-    delete:(req,res) => {
-        productModel.delete(req.params.id);
-        res.redirect("/products/productList");
-    },
+    
 
 //ORIGINAL
     productCart:(req,res) => {
@@ -90,10 +87,6 @@ const productController = {
     productList:(req,res) => {
         let productos = productModel.all();
         res.render('productList',{productos:productos,mil:toThousand});
-    },
-
-    productList2:(req,res) => {
-        res.render('productList2');
     },
 
     productAdd:(req,res) => {
