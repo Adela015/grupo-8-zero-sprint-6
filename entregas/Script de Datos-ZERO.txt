@@ -235,7 +235,7 @@ MIGRACION PRODUCT
        IDgenre: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Categories',
+          model: 'Genres',
           key: 'id'
         }
       },
