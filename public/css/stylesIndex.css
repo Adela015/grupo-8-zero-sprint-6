@@ -494,7 +494,9 @@ div.social-media{
     i.fa-plus-circle,
     i.fa-user-circle,
     i.fa-address-card,
-    i.fa-sign-out-alt{
+    i.fa-sign-out-alt,
+    i.fa-heart,
+    i.fa-shopping-cart{
         display: none;
     }
 }

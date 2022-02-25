@@ -81,7 +81,7 @@ i.fa-angrycreative{
     font-size: 40px;
 }
 
-.fa-angrycreative{
+.fa-plus-circle{
     color: white;
     font-size: 30px;
     margin: 0px 15px;
@@ -296,7 +296,23 @@ div.social-media{
     color: #e0218a;
     transition: all 200ms
 }
-/*---------------------MEDIA QUERIES DEKTOP--------------------*/
+
+/*-----------------MEDIA QUERIE EXTRA PARA OCULTAR BUTTONS----------------*/ 
+
+@media (max-width:767px ) {
+    i.fa-plus-circle,
+    i.fa-user-circle,
+    i.fa-address-card,
+    i.fa-sign-out-alt,
+    i.fa-heart,
+    i.fa-shopping-cart{
+        display: none;
+    }
+}
+
+
+
+/*---------------------MEDIA QUERIES DESKTOP--------------------*/
 
 @media (min-width: 768px) {
     .search-bar{

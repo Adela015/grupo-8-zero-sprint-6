@@ -69,10 +69,10 @@ i.fa-user-circle{
     transition: all 200ms
 }
 
-i.fa-angrycreative{
-    position: relative;
-    right: -40%;
-    font-size: 40px;
+.fa-plus-circle{
+    color: white;
+    font-size: 30px;
+    margin: 0px 15px;
 }
 
 i.fa-address-card{
@@ -494,6 +494,20 @@ div.social-media{
     text-align: center;
 }
 }
+
+/*-----------------MEDIA QUERIE EXTRA PARA OCULTAR BUTTONS----------------*/ 
+
+@media (max-width:767px ) {
+    i.fa-plus-circle,
+    i.fa-user-circle,
+    i.fa-address-card,
+    i.fa-sign-out-alt,
+    i.fa-heart,
+    i.fa-shopping-cart{
+        display: none;
+    }
+}
+
 
 /*-----------------------------MEDIA QUERIES MOBILE-------------------------*/
 

@@ -209,6 +209,11 @@ div.social-media{
     color: #e0218a;
     transition: all 200ms
 }
+
+
+
+
+
 /*---------------------MEDIA QUERIES DEKTOP--------------------*/
 
 @media (min-width: 768px) {
@@ -415,5 +420,18 @@ div.social-media{
     }
     div h1{
         border-bottom: 8px solid #e0218a;
+    }
+}
+
+/*-----------------MEDIA QUERIE EXTRA PARA OCULTAR BUTTONS----------------*/ 
+
+@media (max-width:767px ) {
+    i.fa-plus-circle,
+    i.fa-user-circle,
+    i.fa-address-card,
+    i.fa-sign-out-alt,
+    i.fa-heart,
+    i.fa-shopping-cart{
+        display: none;
     }
 }

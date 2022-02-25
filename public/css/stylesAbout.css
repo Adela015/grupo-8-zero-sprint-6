@@ -389,11 +389,12 @@ div p.texto img{
     i.fa-plus-circle,
     i.fa-user-circle,
     i.fa-address-card,
-    i.fa-sign-out-alt{
+    i.fa-sign-out-alt,
+    i.fa-heart,
+    i.fa-shopping-cart{
         display: none;
     }
 }
-
 
 /*----------MEDIA QUERIES DESKTOP-------*/
 
@@ -556,7 +557,7 @@ div.social-media{
         margin: 0px 15px;
     }
 
-    .fa-angrycreative{
+    .fa-plus-circle{
         color: white;
         font-size: 30px;
         margin: 0px 15px;
