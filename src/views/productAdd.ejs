@@ -45,19 +45,9 @@
             <div class="controlador-form">
                 <label for="genre">Género</label>
                 <select class="input-style-category" name="genre" id="genre" required> 
-                    <option name="rock" value="rock">Rock</option>
-                    <option name="pop" value="pop">Pop</option>
-                    <option name="hip-hop" value="hip-hop">Hip-Hop</option>
-                    <option name="ryb" value="ryb">R&B</option>
-                    <option name="clasica" value="clasica">Clásica</option>
-                    <option name="kpop" value="kpop">K-Pop</option>
-                    <option name="metal" value="metal">Metal</option>
-                    <option name="punk" value="punk">Punk</option>
-                    <option name="alternativo" value="alternativo">Alternativo</option>
-                    <option name="jazz" value="jazz">Jazz</option>
-                    <option name="funk"  value="funk">Funk</option>
-                    <option name="soul" value="soul">Soul</option>
-                    <option name="folk" value="folk">Folk</option>
+                    <% genres.forEach(genre => { %>
+                        <option value="<%=genre.id%>"><%=genre.name%></option>
+                    <% }) %>
                 </select>
             </div>
 
@@ -67,16 +57,15 @@
                 <label for="description">Descripción del Producto</label>
                 <textarea class="text-area" name="description" id="description" cols="30" rows="10" required></textarea>
             </div>
-
-<!----------------------CATEGORIA-------------------------->
+            
+<!----------------------FORMATO PRODUCTO-------------------------->
 
             <div class="controlador-form">
-                <label for="category">Categoría</label>
-                <select class="input-style-type" name="category" id="category" required> 
-                    <option value="cd">CD</option>
-                    <option value="vinilo">Vinilo</option>
-                    <option value="cassette">Cassette</option>
-                    <option value="especial">Articulo especial</option>
+                <label for="category">Tipo de Producto</label>
+                <select class="input-style-category" name="format" id="format" required> 
+                    <% formats.forEach( format => { %>
+                        <option value="<%=format.id%>"><%=format.name%></option>
+                    <% }) %>
                 </select>
             </div>
 
@@ -94,12 +83,6 @@
                 <input class="input-image" type="file" name="image" id="image" >
             </div>   
             
-<!----------------------PRODUCT ID-------------------------->
-
-            <!-- <div class="controlador-form">
-                <label for="product-id">ID del Producto</label>
-                <input class="input-style" type="number" name="product-id" id="product-id" required>
-            </div> -->
 
 <!----------------------BOTON SUBMIT-------------------------->
 

@@ -6,6 +6,11 @@ const path = require('path');
 let db = require("../database/models");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+db.Genres.findAll()
+    .then(res => genres = res)
+db.Format.findAll()
+    .then(res => formats = res)
+
 
 const productController = {
 
@@ -25,15 +30,23 @@ const productController = {
     create:(req,res) => {
         console.log('----------------------------');
         console.log(req.body.category);
-        db.products.create({
-            name: req.body.name,
-            artist: req.body.artist,
-            genre: req.body.genre,
-            category: req.body.category,
-            description: req.body.description,
-            price: Number(req.body.price),
-            image: req.file.filename
+        db.Images.create({
+            url: req.file.filename
         })
+
+        .then(img => {
+            console.log(img)
+            db.Products.create({
+                name: req.body.name,
+                artist: req.body.artist,
+                IDImages:img.dataValues.id,
+                IDgenre: req.body.genre,
+                IDformat: req.body.format,
+                description: req.body.description,
+                price: Number(req.body.price),
+            })
+        })
+        
         // let producto ={
         //     name: req.body.name,
         //     artist: req.body.artist,
@@ -44,7 +57,9 @@ const productController = {
         //     image: req.file.filename
         // };
         // productModel.create(producto);
-        res.redirect("/products/productList");
+
+        res.send(req.body)
+        //res.redirect("/products/productList");
     },
     detail:function (req,res) {
         let id = req.params.id;
@@ -90,12 +105,10 @@ const productController = {
     },
 
     productAdd:(req,res) => {
-        // db.genres.findAll()
-        //     .then(function(genres) {
-        //         return res.render('productAdd', {genres:genres})
-        //     })
-
-        res.render('productAdd')
+        db.Genres.findAll()
+            .then(function(genres) {
+                return res.render('productAdd', {genres,formats})
+            })
         
     },
     wishList:(req,res) => {
