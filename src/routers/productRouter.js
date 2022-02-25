@@ -20,13 +20,13 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 
-// router.get('/productCart',authMiddleware, productController.productCart) //http://localhost:3000/products/productCart
+router.get('/productCart',authMiddleware, productController.productCart) //http://localhost:3000/products/productCart
 
-// router.get('/productList', productController.productList); //http://localhost:3000/products/productList
+router.get('/productList', productController.productList); //http://localhost:3000/products/productList
 
 router.get('/productAdd',authMiddleware,adminMiddleware , productController.productAdd);//http://localhost:3000/products/productAdd
 
-// router.get('/wishList',authMiddleware, productController.wishList);//http://localhost:3000/products/wishList
+router.get('/wishList',authMiddleware, productController.wishList);//http://localhost:3000/products/wishList
 
 //Editar productos
 

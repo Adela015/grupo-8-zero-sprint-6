@@ -47,19 +47,8 @@ const productController = {
             })
         })
         
-        // let producto ={
-        //     name: req.body.name,
-        //     artist: req.body.artist,
-        //     genre: req.body.genre,
-        //     category: req.body.category,
-        //     description: req.body.description,
-        //     price: Number(req.body.price),
-        //     image: req.file.filename
-        // };
-        // productModel.create(producto);
 
-        res.send(req.body)
-        //res.redirect("/products/productList");
+        res.redirect("/products/productList");
     },
     detail:function (req,res) {
         let id = req.params.id;
