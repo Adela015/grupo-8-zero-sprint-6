@@ -24,12 +24,21 @@
 <h1 class="usuario">Te damos la bienvenida <br><span><%=userLogged.nombre %></span> </h1>
 
 <!-------------------------------POLAROID--------------------------------->
-<figure>
-    <img src="/images/avatars/<%=userLogged.avatar%>">
-    <figcaption><%=userLogged.nombre %> </figcaption>
-</figure>
+    <figure>
+        <img src="/images/avatars/<%=userLogged.avatar%>">
+        <figcaption><%=userLogged.nombre %> </figcaption>
+    </figure>
 
-<!----------------------------FOOTER---------------------------------->
+
+
+
+<!-------------------------------EDIT------------------------------------>
+
+<div class="buttonContainer">
+    <a class="editButton" href="/profileEdit">Editar Perfil</a>
+</div>
+
+<!-------------------------------FOOTER---------------------------------->
 
     <%- include ('./partials/footer') %> 
 

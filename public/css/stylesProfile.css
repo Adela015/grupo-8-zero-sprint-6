@@ -160,6 +160,32 @@ figure:after{
     right: -60px;
 }
 
+/* ---------------- BOTON A EDIT --------------*/
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.editButton{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    background-color: #000000;
+    padding: 25px;
+    width: 70%;
+    border: none;
+    transition-property: all;
+    transition-duration: 200ms;
+    
+}
+
+.editButton:hover{
+    background-color: #e0218a;
+
+}
+
+
 /*-------------------FOOTER------------------*/
 
 footer{
@@ -350,6 +376,11 @@ div.social-media{
         font-size: 30px;
     }
 
+    .editButton{
+        width: 30%;
+        margin-top: 100px;
+    }
+
 /*----------FOOTER-------*/
     footer{
         position: relative;
@@ -481,6 +512,7 @@ div.social-media{
         color: #e0218a;
     }
     /*-----POLAROID------*/
+
     figure{
     margin-top: 5%;
     margin-left: 22.5%;

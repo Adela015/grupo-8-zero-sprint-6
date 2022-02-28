@@ -21,7 +21,85 @@
 
 <!-----------------------------USUARIO------------------------------->
 
-<h1 class="usuario">Te damos la bienvenida <br><span><%=userLogged.nombre %></span> </h1>
+<h1 class="usuario">Edita tu perfil <br><span><%=userLogged.nombre %></span> </h1>
+
+<!------------------------FORMULARIO EDIT----------------------->
+
+<div class="container">
+    <form class="form-register" action="/user/register" method="post" enctype="multipart/form-data"> 
+        
+        
+                    <div class="espacioRegister">
+                        <label for="nombre" class="label-registro">Nombre:</label>
+                        <input class="input-style" type="text" 
+                        name="nombre" 
+                        id="nombre" 
+                        placeholder="Nombre" 
+                        class="field"
+                        value="<%= locals.oldData ? oldData.nombre : null %>">
+                        
+                        <% if (locals.errors && errors.nombre) { %>
+                            <div class="error">
+                                <%= errors.nombre.msg  %> 
+                            </div>                      
+                        <% } %>
+                    </div>
+
+                    <div class="espacioRegister">
+                        <label for="apellido" class="label-registro">Apellido:</label>
+                        <input class="input-style" type="text" name="apellido" id="apellido" placeholder="Apellido" 
+                        class="field" 
+                        value="<%= locals.oldData ? oldData.apellido : null %>">
+                        <% if (locals.errors && errors.apellido) { %>
+                            <div class="error">
+                                <%= errors.apellido.msg  %> 
+                            </div>                      
+                        <% } %>
+                    </div>
+
+                    <div class="espacioRegister">
+                        <label for="email" class="label-registro">E-mail:</label>
+                        <input class="input-style" type="email" name="email" id="email" placeholder="example@mail.com" 
+                        class="field"
+                        value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="error">
+                                <%= errors.email.msg  %> 
+                            </div>                      
+                        <% } %>
+                    </div>
+
+                    <div class="espacioRegister">
+                        <label for="contraseña" class="label-registro">Contraseña:</label>
+                        <input class="input-style" type="password" name="contraseña" id="contraseña"  placeholder="Ingrese una contraseña válida"
+                        class="field" value="<%= locals.oldData ? oldData.contraseña : null %>">
+                        <% if (locals.errors && errors.contraseña) { %>
+                            <div class="error">
+                                <%= errors.contraseña.msg%> 
+                            </div>                      
+                        <% } %>
+                    </div>
+
+                    <div class="espacioRegister">
+                        <label for="text" class="label-registro">Fecha de nacimiento:</label>
+                        <input class="input-style" type="date" name="fecha" class="calendario" >
+                    </div>
+
+                    <div class="controlador-form-image">
+                        <label class="input-image-boton" for="avatar">Agregar o Cambiar Foto de perfil</label>
+                        <input class="input-image" type="file" name="avatar" id="avatar" >
+                    </div>  
+                    <br>
+                    
+
+                    <div class="espacioRegister" id="boxButton">
+                        <button type="submit" class="boton1">Editar perfil :)</button>
+                    </div>
+
+    </form>
+        
+
+</div> <!-- div container-->
 
 
 <!----------------------------FOOTER---------------------------------->

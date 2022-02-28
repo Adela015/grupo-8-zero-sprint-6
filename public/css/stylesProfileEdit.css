@@ -120,45 +120,86 @@ i.fa-sign-out-alt{
     color: #e0218a;
 }
 
-/*-------IMAGEN POLAROID-------*/
+/*--------------------FORM----------------------*/
 
-figure{
-    width: 336px;
-    height: 403px;
-    position: relative;
-    background-color: #ffffff;
-    padding: 19px 19px 85px 19px;
-    box-shadow: 1px 3px 20px rgb(110, 97, 97);
-    left: 10%;
-    margin-top: 12%;
-    margin-bottom: 10%;
+.container {
+    margin-top: 50px;
+    background-color: white;
+    padding: 30px 10px;
+    box-shadow: 3px 5px 20px #807d7d;
 }
-figure img{
-    width: 100%;
+
+.espacioRegister{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
 }
-figcaption{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+
+form div label{
+    margin-bottom: 15px;
     text-align: center;
-    margin-top: 22px;
+    font-weight: 700;
 }
-figure:before,
-figure:after{
-    content: "";
-    position: absolute;
-    height: 45px;
-    width: 180px;
-    background-color: #e0218a48;
-    transform: rotate(-40deg);
+
+.input-style{
+    height: 40px;
+    border: #cccccc solid 2px;
+    border-radius: 30px;
+    padding: 0px 15px;
 }
-figure:before{
-    top: 3px;
-    left: -55px;
+
+.controlador-form-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-figure:after{
-    bottom: 3px;
-    right: -60px;
+
+.input-image{
+    display: none;
 }
+
+.input-image-boton{
+    margin-top: 30px;
+    color: white;
+    background-color: black;
+    padding: 20px 20px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 200ms;
+}
+
+.input-image-boton:hover{
+    background-color: #e0218a;
+}
+
+.espacioCheckbox{
+    margin: 20px 20px;
+    text-align: center;
+    
+}
+
+.espacioCheckbox input{
+    padding: 20px 0px
+}
+
+.boton1{
+    margin-top: 30px;
+    color: white;
+    background-color: black;
+    padding: 20px 20px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 200ms;
+}
+
+.boton1:hover{
+    background-color: #e0218a;
+}
+
+
+
 
 /*-------------------FOOTER------------------*/
 
@@ -318,37 +359,28 @@ div.social-media{
         font-size: 30px;
     }
     
-    .title-mas-vendidos{
-        text-align: center;
-    }
-
-    .mas-vendidos{
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        top: 50px;
-    }
-
-    section .mas-vendidos h2{
-        align-items: center;
-    }
-
-    .mas-vendidos-album{
-        width: 35%;
-    }
-
-    .recomendados-album{
-        width: 35%;
-    }
-
-    .ver-mas{
-        display: block;
-        text-align: center;
-    }
-
     .social-media-icon{
         font-size: 30px;
     }
+
+/*----------FORM----------*/
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60%;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.input-style,
+.input-style-category,
+.text-area{
+    max-width: 100%;
+    
+}
+
 
 /*----------FOOTER-------*/
     footer{
@@ -437,16 +469,13 @@ div.social-media{
         transition: all 200ms
     }
 
-    .fa-angrycreative{
+    .fa-plus-circle{
         color: white;
         font-size: 30px;
         margin: 0px 15px;
-        transition: all 200ms;
     }
 
-    .fa-angrycreative:hover{
-        color: #e0218a;
-    }
+    
 
     .fa-sign-out-alt{
         color: white;
@@ -480,13 +509,7 @@ div.social-media{
     .fa-address-card:hover{
         color: #e0218a;
     }
-    /*-----POLAROID------*/
-    figure{
-    margin-top: 5%;
-    margin-left: 22.5%;
-    width: 465px;
-    height: 540px;
-    }
+   
     /*-----------USUARIO-----------*/
     .usuario{
     margin-top: -15%;
