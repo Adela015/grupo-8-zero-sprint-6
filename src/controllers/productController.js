@@ -14,18 +14,17 @@ db.Format.findAll()
 
 const productController = {
 
-    alls:(req,res) => {
-        let productos = productModel.all();
-        res.render('./products/productList',{productos:productos,mil:toThousand})
-    },
+    // alls:(req,res) => {
+    //     let productos = find.all();
+    //     res.render('./products/productList',{productos:productos,mil:toThousand})
+    // },
     productList:(req,res) => {
-        let productos = productModel.all();
-        res.render('./products/productList',{productos:productos,mil:toThousand})
-    },
-    edit2:(req, res) => {
-        let id = req.params.id;
-        let producto = productModel.find(id);
-        res.render('./products/productEdit2',{producto})
+        db.Products.findAll()
+        .then(function (productos) {
+            res.render('productList',{
+                productos
+            })
+        })
     }, 
     create:(req,res) => {
         console.log('----------------------------');
@@ -73,8 +72,14 @@ const productController = {
         res.redirect("/products/productList")
     },
     delete:(req,res) => {
-        productModel.delete(req.params.id);
-        res.redirect("/products/productList");
+        db.Products.delete({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function () {
+            res.redirect("/products/productList")
+        })
     },
     
 
@@ -87,10 +92,6 @@ const productController = {
         let id = req.params.id;
         let producto = productModel.find(id);
         res.render('productDetail',{producto,mil:toThousand})
-    },
-    productList:(req,res) => {
-        let productos = productModel.all();
-        res.render('productList',{productos:productos,mil:toThousand});
     },
 
     productAdd:(req,res) => {

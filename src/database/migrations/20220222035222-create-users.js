@@ -23,8 +23,12 @@ module.exports = {
       user_image: {
         type: Sequelize.STRING
       },
-      roles_ID: {
-        type: Sequelize.INTEGER,
+        roles_ID: {
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'Roles',
+            key: 'id'
+          }
       },
       createdAt: {
         allowNull: false,
