@@ -67,11 +67,12 @@
   "id": 7
  },
  {
-  "nombre": "Adela",
-  "apellido": "Cervantes Ortiz",
-  "email": "adela@zero.com",
+  "nombre": "dgdfg",
+  "apellido": "Cfggdg",
+  "email": "abc@zero.com",
   "contraseña": "$2a$10$bbcQ2jpEMHs.BumXaeMh2eVFD9JOp0iyNO8nUZRUEz14jVmqmBx8G",
   "fecha": "2000-01-07",
+  "avatar": "1643841677063_img_.jpg",
   "isAdmin": true,
   "id": 8
  },
@@ -193,5 +194,15 @@
   "avatar": "1645465307222_img_.jpg",
   "isAdmin": true,
   "id": 20
+ },
+ {
+  "nombre": "Adela",
+  "apellido": "Cervantes Ortiz",
+  "email": "adela@zero.com",
+  "contraseña": "$2a$10$Axw4vD5sHupP4i2nBzc6wOMCTmSnWLLwdOG1rjAOLVtLgq.4nGkNi",
+  "fecha": "2022-02-09",
+  "avatar": "1646101428504_img_.jpg",
+  "isAdmin": true,
+  "id": 21
  }
 ]

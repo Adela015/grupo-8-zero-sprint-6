@@ -58,29 +58,6 @@
                     </div>
 
                     <div class="espacioRegister">
-                        <label for="email" class="label-registro">E-mail:</label>
-                        <input class="input-style" type="email" name="email" id="email" placeholder="example@mail.com" 
-                        class="field"
-                        value="<%= locals.oldData ? oldData.email : null %>">
-                        <% if (locals.errors && errors.email) { %>
-                            <div class="error">
-                                <%= errors.email.msg  %> 
-                            </div>                      
-                        <% } %>
-                    </div>
-
-                    <div class="espacioRegister">
-                        <label for="contraseña" class="label-registro">Contraseña:</label>
-                        <input class="input-style" type="password" name="contraseña" id="contraseña"  placeholder="Ingrese una contraseña válida"
-                        class="field" value="<%= locals.oldData ? oldData.contraseña : null %>">
-                        <% if (locals.errors && errors.contraseña) { %>
-                            <div class="error">
-                                <%= errors.contraseña.msg%> 
-                            </div>                      
-                        <% } %>
-                    </div>
-
-                    <div class="espacioRegister">
                         <label for="text" class="label-registro">Fecha de nacimiento:</label>
                         <input class="input-style" type="date" name="fecha" class="calendario" >
                     </div>
