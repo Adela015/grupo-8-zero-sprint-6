@@ -1,5 +1,6 @@
 const { log } = require('console');
 const req = require('express/lib/request');
+const { format } = require('path');
 const path = require('path');
 // const jsonDB = require ('../model/jsonDatabase');
 // const productModel = jsonDB('products');
@@ -14,25 +15,23 @@ db.Format.findAll()
 
 const productController = {
 
-    // alls:(req,res) => {
-    //     let productos = find.all();
-    //     res.render('./products/productList',{productos:productos,mil:toThousand})
-    // },
     productList:(req,res) => {
-        db.Products.findAll()
+        db.Products.findAll({
+            include:[{association:'Images'},{association:'Format'}],
+        })
         .then(function (productos) {
             res.render('productList',{
-                productos
+                productos, mil:toThousand
             })
         })
     }, 
+
     create:(req,res) => {
         console.log('----------------------------');
         console.log(req.body.category);
         db.Images.create({
             url: req.file.filename
         })
-
         .then(img => {
             console.log(img)
             db.Products.create({
@@ -46,31 +45,53 @@ const productController = {
             })
         })
         
-
         res.redirect("/products/productList");
     },
+
     detail:function (req,res) {
-        let id = req.params.id;
-        let producto = productModel.find(id);
-        let productos = productModel.all();
-        console.log(req.session.userLogged)
-        res.render('./products/productDetail',{producto,mil:toThousand,productos:productos})
+        db.Products.findByPk(req.params.id,{
+                include:[{association:'Images'},{association:'Format'},{association:'Genres'}],
+            })
+        .then (function (producto) {
+            res.render('productDetail',{producto,mil:toThousand})
+        })
     },
+
     editarAccion:(req,res) => {
-        let images = productModel.find(req.params.id);
-        let producto ={
-            id: req.params.id,
-            name: req.body.productName,
-            artist: req.body.productArt,
-            description: req.body.productDescription,
-            price:Number(req.body.productPrice),
-            category: req.body.category,
-            //image:req.file!=null?req.file.filename:images/albumes.imagen
-            image: req.file.filename
-        };
-        productModel.update(producto);
-        res.redirect("/products/productList")
+        db.Images.create({
+            url: req.file.filename
+        })
+        .then(img => {
+            console.log(img)
+            db.Products.update({
+                name: req.body.productName,
+                artist: req.body.productArt,
+                IDImages:img.dataValues.id,
+                IDgenre: req.body.genre,
+                IDformat: req.body.format,
+                description: req.body.productDescription,
+                price: Number(req.body.productPrice),
+            },{
+                where: {
+                    id: req.params.id
+                }})
+                .then(function () {
+                    res.redirect("/products/productList")
+                })
+        })
     },
+
+    edit:(req,res) => {
+        let producto = db.Products.findByPk(req.params.id)
+        let formatos = db.Format.findAll()
+        let generos = db.Genres.findAll()
+        Promise.all([producto, formatos, generos])
+        .then(function ([producto, formatos, generos]) {
+            res.render("productEdit",{producto, formatos, generos})
+        })
+        
+    },
+
     delete:(req,res) => {
         db.Products.delete({
             where: {
@@ -81,17 +102,9 @@ const productController = {
             res.redirect("/products/productList")
         })
     },
-    
 
-//ORIGINAL
     productCart:(req,res) => {
         res.render('productCart');
-    },
-
-    productDetail:(req,res) => {
-        let id = req.params.id;
-        let producto = productModel.find(id);
-        res.render('productDetail',{producto,mil:toThousand})
     },
 
     productAdd:(req,res) => {
@@ -103,12 +116,8 @@ const productController = {
     },
     wishList:(req,res) => {
         res.render('wishList');
-    },
-    edit:(req, res) => {
-        let id = req.params.id;
-        let producto = productModel.find(id);
-        res.render('productEdit',{producto})
     }
+
 }
 
 

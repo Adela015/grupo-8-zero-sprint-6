@@ -28,12 +28,12 @@
 <!------------------------------ENLACES-------------------------------------->
 
 <div id="ruta">
-    <a href="/" class="inicio"> Home </a><i class="fas fa-chevron-right"> </i><a> <%=producto.genre%> <i class="fas fa-chevron-right"></i> <%=producto.name%> - <a> <%=producto.artist%></a></a>
+    <a href="/" class="inicio"> Home </a><i class="fas fa-chevron-right"> </i><a> <%=producto.Genres.name%> <i class="fas fa-chevron-right"></i> <%=producto.name%> - <a> <%=producto.artist%></a></a>
 </div>
 
 <!-------------------------------POLAROID--------------------------------->
 <figure>
-    <img src="/images/albumes/<%=producto.image%> ">
+    <img src="/images/albumes/<%=producto.Images.url%> ">
     <figcaption><%=producto.artist%></figcaption>
 </figure>
 
@@ -44,7 +44,7 @@
     <br>
     <p class="parrafo2"><%=producto.artist%></p>
     <br>
-    <p class="parrafo2">(<%=producto.category%>)</p>
+    <p class="parrafo2">(<%=producto.Format.name%>)</p>
     <br>
     <p class="precio"> $ <%=mil(producto.price)%></p>
 </div>
@@ -52,12 +52,6 @@
 <!---------------------------------BOTONES---------------------------------->
 
 <div>
-    <!-- <button type="submit" id="botton1"><p><i class="fas fa-shopping-cart"></i><a href="/products/productCart" id="contenido"> Agregar al carrito</a></p></button>
-    <br>
-    <button type="submit" id="botton2"><p><i class="fas fa-heart" id="heart1"></i><a href="/products/wishList" id="contenido"> Lista de deseos</a></p></button>
-    <br>
-    <br> -->
-
     <% if (locals.isLogged) { %>
         <button type="submit" id="botton1"><p><i class="fas fa-shopping-cart"></i><a href="/products/productCart" id="contenido"> Agregar al carrito</a></p></button>
         <br>
@@ -81,9 +75,7 @@
         <br>
         <% } %>
 
-    <p class="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-        <br>
-        Fugiat sequi, quia quas delectus sint cum. Ea perspiciatis</p>
+    <p class="texto"><%= producto.description %> </p>
     </div>
 
 

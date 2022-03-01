@@ -39,7 +39,7 @@
     <label for="text" class="">Vinilo</label>
     <br>
     <input type="radio" name="si-no">
-    <label for="text" class="">Casette</label>
+    <label for="text" class="">Cassette</label>
     <br>
     <input type="radio" name="si-no">
     <label for="text" class="">Artículo especial</label>
@@ -79,10 +79,10 @@
     <div class="mas-vendidos">
     <% for(let producto of productos){ %>
         <article class="mas-vendidos-album">
-            <a href="/products/productDetail/<%=producto.id%>"><img class="mas-vendidos-album-img" src="/images/albumes/<%=producto.image%>" alt="Álbum - I'm Home"></a>
+            <a href="/products/productDetail/<%=producto.id%>"><img class="mas-vendidos-album-img" src="/images/albumes/<%=producto.Images.url%>" alt="Álbum - I'm Home"></a>
             <h5 class="album-title"><%=producto.name%></h5>
             <h5 class="album-title2"><%=producto.artist%></h5>
-            <h5 class="album-title3">(<%=producto.category%>)</h5>
+            <h5 class="album-title3">(<%=producto.Format.name%>)</h5>
                 <p class="album-price"> $ <%=mil(producto.price)%><a href="/products/wishList"><i class="fas fa-heart addWish"></i></a></p>
                 <div>
                     <button type="submit" class="boton-carrito"> <a href="/products/productCart"> Agregar al carrito</a></button>

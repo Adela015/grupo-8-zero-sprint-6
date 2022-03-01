@@ -45,19 +45,9 @@
             <div class="controlador-form">
                 <label for="product-genre">Género</label>
                 <select class="input-style-category" name="productGenre" id="product-genre" required >
-                    <option value="rock">Rock</option>
-                    <option value="pop">Pop</option>
-                    <option value="hip-hop">Hip-Hop</option>
-                    <option value="ryb">R&B</option>
-                    <option value="clasica">Clásica</option>
-                    <option value="kpop">K-Pop</option>
-                    <option value="metal">Metal</option>
-                    <option value="punk">Punk</option>
-                    <option value="alternativo">Alternativo</option>
-                    <option value="jazz">Jazz</option>
-                    <option value="funk">Funk</option>
-                    <option value="soul">Soul</option>
-                    <option value="folk">Folk</option>
+                    <% for( let genero of generos ) { %>
+                        <option value="<%= genero.id %> "><%= genero.name %> </option>
+                    <% } %>
                 </select>
             </div>
 
@@ -68,14 +58,14 @@
                 <textarea class="text-area" name="productDescription" id="product-description" cols="30" rows="10" required><%=producto.description%></textarea>
             </div>
 
-<!----------------------CATEGORIA-------------------------->
+<!----------------------FORMATO-------------------------->
 
             <div class="controlador-form">
-                <label for="product-category">Categoría</label>
-                <select class="input-style-type" name="category" id="category" required> 
-                    <option value="cd">CD</option>
-                    <option value="vinilo">Vinilo</option>
-                    <option value="especial">Articulo especial</option>
+                <label for="product-category">Formato</label>
+                <select class="input-style-type" name="format" id="category" required> 
+                    <% for( let formato of formatos ) { %>
+                        <option value="<%= formato.id %>"><%= formato.name %> </option>
+                    <% } %>
                 </select>
             </div>
 
@@ -92,13 +82,6 @@
                 <label class="input-image-boton" for="productImage">Agregar Imágen</label>
                 <input class="input-image" type="file" name="productImage" id="productImage" accept=".jpg,.png" required>
             </div>   
-            
-<!----------------------PRODUCT ID-------------------------->
-
-            <div class="controlador-form">
-                <label for="product-id">ID del Producto</label>
-                <input class="input-style" type="number" name="product-id" id="product-id" value="<%=producto.id%>" required>
-            </div>
 
 <!----------------------BOTON SUBMIT-------------------------->
 
