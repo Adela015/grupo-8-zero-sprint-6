@@ -38,10 +38,12 @@ router.post('/productAdd',upload.single("image"), productController.create);
 
 router.get('/productDetail/:id',productController.detail);
 
+router.get('/search',productController.Search);
+
 // router.get('/productEdit',adminMiddleware,productController.edit);
 
 router.get('/productList',productController.productList);
 
-// router.delete('/borrar/:id',adminMiddleware,productController.delete);
+router.delete('/borrar/:id',adminMiddleware,productController.delete);
 
 module.exports = router;

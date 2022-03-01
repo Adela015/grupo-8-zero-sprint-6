@@ -93,9 +93,9 @@ const productController = {
     },
 
     delete:(req,res) => {
-        db.Products.delete({
+        db.Products.destroy({
             where: {
-                id: req.params.id
+                id: req.params.id //saca el id de la ruta
             }
         })
         .then(function () {
@@ -110,14 +110,24 @@ const productController = {
     productAdd:(req,res) => {
         db.Genres.findAll()
             .then(function(genres) {
-                return res.render('productAdd', {genres,formats})
+                return res.render('productAdd', {genres})
             })
         
     },
     wishList:(req,res) => {
         res.render('wishList');
+    },
+    Search:(req,res) => {
+        db.Products.findAll({
+            where:{
+                name: req.query.search
+            },
+            include:[{association:'Images'},{association:'Format'}]
+        })
+        .then(function (productos) {
+            res.render('productList', {productos, mil:toThousand})
+        })
     }
-
 }
 
 
