@@ -9,8 +9,10 @@ router.get('/about', mainController.about); //http://localhost:3000/about
 
 router.get('/newsLetter', mainController.newsLetter); //http://localhost:3000/newsLetter
 
-router.get('/profile', mainController.profile); //http://localhost:3000/newsLetter
+router.get('/profile', mainController.profile);
 
-router.get('/profileEdit', mainController.profileEdit);
+router.get('/profileEdit/:id', mainController.profileEdit);
+
+router.put('/profileEdit/:id', mainController.gary);
 
 module.exports = router;

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title> ZERO | Perfil Edit </title>
+    <title> ZERO | Editar perfil </title>
 </head>
 
 <body>
@@ -26,18 +26,12 @@
 <!------------------------FORMULARIO EDIT----------------------->
 
 <div class="container">
-    <form class="form-register" action="/user/register" method="post" enctype="multipart/form-data"> 
-        
-        
+    <form class="form-register" action="/profileEdit/<%= oldData.id %>?_method=put" method="POST" enctype="multipart/form-data"> 
+
                     <div class="espacioRegister">
                         <label for="nombre" class="label-registro">Nombre:</label>
                         <input class="input-style" type="text" 
-                        name="nombre" 
-                        id="nombre" 
-                        placeholder="Nombre" 
-                        class="field"
-                        value="<%= locals.oldData ? oldData.nombre : null %>">
-                        
+                        name="nombre" id="nombre" placeholder="Nombre" class="field"value="<%= locals.oldData ? oldData.firstname : null %>">            
                         <% if (locals.errors && errors.nombre) { %>
                             <div class="error">
                                 <%= errors.nombre.msg  %> 
@@ -49,7 +43,7 @@
                         <label for="apellido" class="label-registro">Apellido:</label>
                         <input class="input-style" type="text" name="apellido" id="apellido" placeholder="Apellido" 
                         class="field" 
-                        value="<%= locals.oldData ? oldData.apellido : null %>">
+                        value="<%= locals.oldData ? oldData.lastname : null %>">
                         <% if (locals.errors && errors.apellido) { %>
                             <div class="error">
                                 <%= errors.apellido.msg  %> 

@@ -269,6 +269,10 @@ p.cash {
     color: white;
 }
 
+#botton i.fa-shopping-cart{
+    color: white;
+}
+
 /*-------------------CONTINUE COMPRANDO----------------*/
 
 a.shop {
@@ -547,6 +551,8 @@ div.social-media{
     transition-duration: 200ms;
 }
 
+
+
 /*-----------------MEDIA QUERIE EXTRA PARA OCULTAR BUTTONS----------------*/ 
 
 @media (max-width:767px ) {
@@ -569,6 +575,7 @@ div.social-media{
         border: none;
         height: 50px;
         margin-right: 10px;
+        cursor: pointer;
     }
 
     .search-button{
@@ -587,6 +594,7 @@ div.social-media{
     .fa-search{
         color: white;
         font-size: 30px;
+        cursor: pointer;
     }
 
     .nav-bar-icons{
@@ -926,6 +934,15 @@ h2.titulo-recomendados{
 }
 .container{
     margin-bottom: 2%;
+}
+.fa-plus-circle{
+    color: white;
+    font-size: 40px;
+    margin: 0px 15px;
+}
+.fa-plus-circle:hover{
+    color: #e0218a;
+    transition: 200ms all;
 }
 }
 

@@ -1,16 +1,20 @@
-const jsonDB = require('../model/jsonDatabase');
-const productModel = jsonDB('user');
-
+let db = require("../database/models");
 
 function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false
 
     let emailsInCookie = req.cookies.userEmail
-    let userFromCoike = productModel.findField('email',emailsInCookie);
 
-    if(userFromCoike){
+    db.Users.findOne({
+        where: {
+            email: emailsInCookie
+        }
+    })
+    .then(function (userFromCoike) {
         req.session.userLogged = userFromCoike
-    }
+    })
+
+
 
     if (req.session && req.session.userLogged) {
         res.locals.isLogged = true

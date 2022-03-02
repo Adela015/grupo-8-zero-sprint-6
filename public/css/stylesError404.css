@@ -251,6 +251,7 @@ div.social-media{
         border: none;
         height: 50px;
         margin-right: 10px;
+        cursor: pointer;
     }
 
     .search-button{
@@ -284,9 +285,14 @@ div.social-media{
 
     .fa-plus-circle{
         color: white;
-        font-size: 30px;
+        font-size: 40px;
         margin: 0px 15px;
     }
+    .fa-plus-circle:hover{
+        color: #e0218a;
+        transition: 200ms all;
+    }
+    
 
     .fa-sign-out-alt{
         color: white;
@@ -406,6 +412,7 @@ div.social-media{
     .fa-search{
         color: white;
         font-size: 30px;
+        cursor: pointer;
     }
     
     .nav-bar-icons{

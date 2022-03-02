@@ -661,7 +661,8 @@ div.social-media{
       border: none;
       height: 50px;
       margin-right: 10px;
-      transition: all 200ms
+      transition: all 200ms;
+      cursor: pointer
   }
 
   .search-button{
@@ -681,6 +682,7 @@ div.social-media{
   .fa-search{
       color: white;
       font-size: 30px;
+      cursor: pointer;
   }
 
   .nav-bar-icons{
@@ -1106,6 +1108,15 @@ section.mas-vendidos1 article.mas-vendidos-album1 {
   margin-left: 60%;
   padding: 10px 12.5%;
   margin-bottom: 5%;
+}
+.fa-plus-circle{
+  color: white;
+  font-size: 40px;
+  margin: 0px 15px;
+}
+.fa-plus-circle:hover{
+  color: #e0218a;
+  transition: 200ms all;
 }
 
 }

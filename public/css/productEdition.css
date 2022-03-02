@@ -417,6 +417,7 @@ div.social-media{
         border: none;
         height: 50px;
         margin-right: 10px;
+        cursor: pointer;
     }
 
     .search-button{
@@ -554,6 +555,7 @@ div.social-media{
     .fa-search{
         color: white;
         font-size: 30px;
+        cursor: pointer;
     }
     
     .nav-bar-icons{

@@ -13,7 +13,7 @@ body {
 /*--------------------------NAVBAR----------------------*/
 
 nav.nav-bar div.enlace a img.logo{
-    max-width: 75%;
+    max-width: 47%;
     padding-left: 10px;
 }
 
@@ -133,9 +133,10 @@ i.fa-sign-out-alt{
 
 /*-------------------FILTROS---------------*/
 
-#filtros{
-    margin-left: 28%;
-}
+/* main.contenedor-principal section.contenedor-filtro{
+    margin-left: -10%;
+    text-align: left;
+} */
 
 /*-------------------CARDS------------------*/
 
@@ -227,8 +228,6 @@ p .album-price{
     align-self: center;
 }
 
-
-
 .mas-vendidos{
     display: flex;
     flex-wrap: wrap;
@@ -237,28 +236,18 @@ p .album-price{
     
 }
 
-
 .mas-vendidos-album{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px 25px ;
-    box-shadow: 3px 5px 20px #807d7d;
-    border: red dotted 1px;
+    box-shadow: 2px 5px 20px #6b6b6b;
+    border: rgb(53, 52, 52) 2px;
 }
 
 article.mas-vendidos{
     margin: auto;
 }
-
-.mas-vendidos-album-img{
-    width: 75%;
-    height: auto;
-    
-    padding: 30px 0px;
-}
-
-
 
 p.album-price i {
     padding-left: 70px 50px 40px;
@@ -313,7 +302,31 @@ div section i.fa-chevron-right:hover{
     transition-duration: 200ms;
 }
 
-/*------------------LISTA NúMERICA-----------*/
+a h5.album-title{
+    text-align: center;
+}
+
+img.mas-vendidos-album-img{
+    width: 100%;
+    height: auto;
+    transform: scale(0.8);
+    padding: 30px 0px;
+    margin-bottom: -10%;
+    margin-top: -8%;
+}
+
+section.contenedor-cards div.mas-vendidos{
+    transform: scale(0.9);
+    position: relative;
+    right: -3%;
+    top: 18%;
+    margin-top: -1%;
+    margin-bottom: 125%;
+    margin-left: -8%;
+}
+
+
+/*------------------LISTA NÚMERICA-----------*/
 
 div.lista-numerica{
     text-align: center;
@@ -494,12 +507,14 @@ div.social-media{
     i.fa-address-card,
     i.fa-sign-out-alt,
     i.fa-heart,
+    main.contenedor-principal section.contenedor-filtro,
     i.fa-shopping-cart{
         display: none;
     }
+
 }
 
-/*---------------------MEDIA QUERIES DEKTOP--------------------*/
+/*---------------------MEDIA QUERIES DESKTOP--------------------*/
 
 @media (min-width: 768px) {
     .search-bar{
@@ -507,6 +522,7 @@ div.social-media{
         border: none;
         height: 50px;
         margin-right: 10px;
+        cursor: pointer;
     }
 
     .search-button{
@@ -650,6 +666,7 @@ div.social-media{
     .fa-search{
         color: white;
         font-size: 30px;
+        cursor: pointer;
     }
     
     .nav-bar-icons{
@@ -714,19 +731,30 @@ div.social-media{
     }
     /*------------------CARDS---------------*/
     
-    div section.mas-vendidos{
-        transform: scale(0.5);
+    section.contenedor-cards div.mas-vendidos{
+        transform: scale(0.9);
         position: relative;
-        right: 3%;
+        right: -8%;
         top: 12%;
         margin-top: -26%;
         margin-bottom: -5%;
+    }
+
+    img.mas-vendidos-album-img{
+        width: 100%;
+        height: auto;
+        transform: scale(0.8);
+        padding: 30px 0px;
+        margin-bottom: -10%;
+        margin-top: -8%;
     }
     /* article.mas-vendidos-album p.album-price{
         font-size: 45px;
         position: relative;
         left: 2%;
     } */
+
+
     button.boton-carrito{
         position: relative;
         top: -20px;
@@ -748,46 +776,68 @@ div.social-media{
         margin-bottom: 15%;
         border-bottom: 8px solid #e0218a;
     }
-    #filtros{
-        margin-bottom: -50%;
-        margin-top: -5%;
-        margin-left: 3%;
-    }
     div h1{
         border-bottom: 8px solid #e0218a;
+    }
+    div button.boton-carrito{
+        font-size: 10%;
+    }
+    section.contenedor-filtro{
+        position: relative;
+        left: 2%;
+        bottom: 5%;
+    }
+    section.contenedor-filtro #filtros h2.filtros{
+        text-align: center;
+        font-size: 27px;
+        border-bottom: 5px solid #e0218a;
+    }
+    section.contenedor-filtro #filtros h3.artista-filtros{
+        border-bottom: 2px solid #e0218a;
+        margin-bottom: 5%;
+    }
+    section.contenedor-filtro #filtros input.rango{
+        color: #e0218a;
+    }
+    .fa-plus-circle{
+        color: white;
+        font-size: 40px;
+        margin: 0px 15px;
+    }
+    .fa-plus-circle:hover{
+        color: #e0218a;
+        transition: 200ms all;
     }
 }
 
 /*-----------------------------MEDIA QUERIES MOBILE-------------------------*/
 
-/* @media screen and (min-width: 450px) {
+@media screen and (min-width: 450px) {
 
     article p.album-price a i.fa-heart{
-        font-size: 50px;
+        font-size: 35px;
         position: relative;
-        bottom: 50px;
-        right: 18%;
+        bottom: 35px;
+        right: 35%;
     }
     article h5.album-title{
-        font-size: 25px;
+        font-size: 21px;
     }
     button.boton-carrito{
         position: relative;
         top: -20px;
-        font-size: 25px;
+        font-size: 10px;
+        margin-top: 5%;
+        margin-bottom: 10%;
     }
     button.boton-carrito a{
-        font-size: 23px;
-    }
-    p.album-price{
-        font-size: 25px;
-        position: relative;
-        left: 15%;
+        font-size: 15px;
     }
     article p.album-price{
         font-size: 25px;
         position: relative;
-        left: 7.8%;
+        left: 20%;
+        font-weight: 500;
     }
     div.lista-numerica{
         margin-top:0.5%;
@@ -795,7 +845,7 @@ div.social-media{
     .contenedor-addproduct{
         text-align: center;
         margin: 60px 0px;
-        font-size: 30px;
+        font-size: 22px;
     }
 }
- */
+

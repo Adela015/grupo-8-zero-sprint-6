@@ -21,21 +21,18 @@
 
 <!-----------------------------USUARIO------------------------------->
 
-<h1 class="usuario">Te damos la bienvenida <br><span><%=userLogged.nombre %></span> </h1>
+<h1 class="usuario">Te damos la bienvenida <br><span><%=userLogged.firstname %></span> </h1>
 
 <!-------------------------------POLAROID--------------------------------->
     <figure>
-        <img src="/images/avatars/<%=userLogged.avatar%>">
-        <figcaption><%=userLogged.nombre %> </figcaption>
+        <img src="/images/avatars/<%=userLogged.user_image%>">
+        <figcaption><%=userLogged.firstname %> </figcaption>
     </figure>
 
-
-
-
-<!-------------------------------EDIT------------------------------------>
+<!-------------------------------EDITAR------------------------------------>
 
 <div class="buttonContainer">
-    <a class="editButton" href="/profileEdit">Editar Perfil</a>
+    <a class="editButton" href="/profileEdit/<%= userLogged.id %> ">Editar Perfil</a>
 </div>
 
 <!-------------------------------FOOTER---------------------------------->
