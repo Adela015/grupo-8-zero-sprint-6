@@ -118,7 +118,8 @@ i.fa-sign-out-alt{
 .contenedor-principal{
     display: flex;
     flex-wrap: wrap;
-    justify-content:center
+    justify-content:center;
+
     
 }
 .contenedor-filtro{
@@ -402,7 +403,7 @@ footer{
     width: 100%;
     justify-content: center;
     padding: 20px;
-    margin-top: 75px;
+    margin-top: 150px;
     transition-property: all;
     transition-duration: 200ms;
 }
@@ -773,7 +774,7 @@ div.social-media{
     }
     div h4.catalogo {
         margin-top: -18%;
-        margin-bottom: 15%;
+        margin-bottom: 7%;
         border-bottom: 8px solid #e0218a;
     }
     div h1{
@@ -791,6 +792,7 @@ div.social-media{
         text-align: center;
         font-size: 27px;
         border-bottom: 5px solid #e0218a;
+        margin-top: 33%;
     }
     section.contenedor-filtro #filtros h3.artista-filtros{
         border-bottom: 2px solid #e0218a;
