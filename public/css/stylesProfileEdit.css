@@ -14,7 +14,7 @@ body {
 /*--------------------------NAVBAR----------------------*/
 
 nav.nav-bar div.enlace a img.logo{
-    max-width: 75%;
+    max-width: 47%;
     padding-left: 10px;
 }
 
@@ -114,7 +114,11 @@ i.fa-sign-out-alt{
 .usuario{
     font-size: 40px;
     text-align: center;
-    margin-top: -7%;
+    margin-top: -7%;    
+    margin-bottom: 5%;
+    margin-top: -15%;
+    border-bottom: 8px solid #e0218a;
+
 }
 .usuario span{
     color: #e0218a;

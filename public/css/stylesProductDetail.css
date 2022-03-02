@@ -14,7 +14,7 @@ body {
 /*--------------------------NAVBAR----------------------*/
 
 nav.nav-bar div.enlace a img.logo{
-  max-width: 75%;
+  max-width: 47%;
   padding-left: 10px;
 }
 
@@ -1109,6 +1109,7 @@ section.mas-vendidos1 article.mas-vendidos-album1 {
   padding: 10px 12.5%;
   margin-bottom: 5%;
 }
+
 .fa-plus-circle{
   color: white;
   font-size: 40px;
