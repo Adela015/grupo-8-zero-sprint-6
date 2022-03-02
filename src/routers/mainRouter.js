@@ -1,5 +1,6 @@
 const express = require('express');
 const mainController = require('../controllers/mainController');
+const imageRegisterMulter = require ('../middlewares/imageRegisterMulter')
 const router = express.Router();
 
 
@@ -13,6 +14,6 @@ router.get('/profile', mainController.profile);
 
 router.get('/profileEdit/:id', mainController.profileEdit);
 
-router.put('/profileEdit/:id', mainController.gary);
+router.put('/profileEdit/:id', imageRegisterMulter.single('avatar'), mainController.edit);
 
 module.exports = router;

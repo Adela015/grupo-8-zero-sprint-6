@@ -5,14 +5,14 @@ function userLoggedMiddleware(req, res, next) {
 
     let emailsInCookie = req.cookies.userEmail
 
-    db.Users.findOne({
-        where: {
-            email: emailsInCookie
-        }
-    })
-    .then(function (userFromCoike) {
-        req.session.userLogged = userFromCoike
-    })
+    // db.Users.findOne({
+    //     where: {
+    //         email: emailsInCookie
+    //     }
+    // })
+    // .then(function (userFromCoike) {
+    //     req.session.userLogged = userFromCoike
+    // })
 
 
 

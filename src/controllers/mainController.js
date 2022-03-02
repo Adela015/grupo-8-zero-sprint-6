@@ -19,7 +19,7 @@ const mainController = {
     profileEdit:(req, res) => {
         res.render('profileEdit', {oldData: req.session.userLogged})
     },
-    gary: (req,res) => {
+    edit: (req,res) => {
         console.log("-------------------------------------------------------")
         
         console.log(req.body.nombre)
