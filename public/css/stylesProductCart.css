@@ -156,51 +156,50 @@ div h1{
     box-shadow: 5px 5px 25px grey;
 }
 
-#imagen-blog{
+.imagen-blog{
     width: 48%;
     margin-top: 10%;
     margin-left: 6.5%;
 }
 
-#parrafo1{
+.parrafo1{
     font-size: 21px;
-    margin-left: 57%;
+    margin-left: 65%;
     margin-bottom: 2%;
-    position: relative;
+    position:absolute;
     bottom: 60%;
     font-weight: 600
 }
 
-#parrafo2{
+.parrafo2{
     font-size: 21px;
-    margin-left: 57%;
+    margin-left: 65%;
     margin-bottom: 2%;
     position: relative;
-    bottom: 60%;
+    bottom: 43%;
 }
 
-#parrafo3{
+.parrafo3{
     font-size: 24px;
-    margin-left: 70%;
+    margin-left: 65%;
     margin-bottom: 2%;
     position: relative;
-    bottom: 60%;
+    bottom: 42%;
 }
 
-i.fa-trash{
+i.fa-times{
     color: black;
     font-size: 40px;
-    position: relative;
+    position: absolute;
+    z-index: 100;
     left: 90%;
-    top: 50%;
+    bottom: 6%;
+    cursor: pointer;
 }
 
-#trash2 i.fa-trash{
-    color: rgb(255, 0, 179);
-    font-size: 400px;
-    position: relative;
-    left: 70%;
-    top: 40%;
+i.fa-times:hover{
+    color: #e0218a;
+
 }
 
 
@@ -230,7 +229,7 @@ i.fa-trash{
 }
 
 p.cash {
-    margin-left: 80%;
+    margin-left: 70%;
     margin-top: -45px;
     margin-bottom: 15px;
     width: 120px;
@@ -250,6 +249,11 @@ p.cash {
     transition-duration: 200ms;
     
 }
+#botton:hover{
+    background: #e0218a;
+    transition-property: all;
+    transition-duration: 200ms;
+}
 
 #botton p {
     margin-top: -10px;
@@ -259,11 +263,6 @@ p.cash {
     letter-spacing: 1px;
 }
 
-#botton:hover{
-    background: #e0218a;
-    transition-property: all;
-    transition-duration: 200ms;
-}
 
 #botton a {
     color: white;
@@ -271,6 +270,11 @@ p.cash {
 
 #botton i.fa-shopping-cart{
     color: white;
+}
+
+#carrito{
+    color: white;
+    font-size: 40px;
 }
 
 /*-------------------CONTINUE COMPRANDO----------------*/
@@ -870,7 +874,9 @@ div h1{
     position: relative;
     top: -150px;
     left: 58.5%;
+    color: white;
     }
+
 /*---------Continue comprando-------*/
     a.shop{
         position: relative;
@@ -892,20 +898,20 @@ div h1{
 } */
 
 /*------IMAGEN BLOG CARD-----*/
-#imagen-blog{
+.imagen-blog{
     width: 25%;
     margin-top: 2%;
     margin-left: 4%;
     transition-property: all;
     transition-duration: 600ms;
 }
-#imagen-blog:hover{
+.imagen-blog:hover{
     transform: translateX(-80px);
     transition-property: all;
     transition-duration: 600ms;
 }
 /*-------PARRAFOS DE BLOG CARD-----*/
-#parrafo1{
+.parrafo1{
     font-size: 30px;
     margin-left: 40%;
     margin-bottom: 2%;
@@ -914,7 +920,7 @@ div h1{
     font-weight: 600
 }
 
-#parrafo2{
+.parrafo2{
     font-size: 26px;
     margin-left: 40%;
     margin-bottom: 2%;
@@ -922,7 +928,7 @@ div h1{
     bottom: 73%;
 }
 
-#parrafo3{
+.parrafo3{
     font-size: 30px;
     margin-left: 40%;
     margin-bottom: 2%;

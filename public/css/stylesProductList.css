@@ -119,8 +119,8 @@ i.fa-sign-out-alt{
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
-
-    
+    /* grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    width: fit-content */
 }
 .contenedor-filtro{
     width: 15%;
