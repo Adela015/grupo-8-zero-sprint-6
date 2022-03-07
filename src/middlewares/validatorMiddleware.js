@@ -2,9 +2,11 @@ const {body} = require('express-validator');
 const path = require('path')
 const validaciones = [
     body('nombre')
-        .notEmpty().withMessage("Debes completar con un nombre"),
+        .notEmpty().withMessage("Debes completar con un nombre")
+        .isLength({min: 2}).withMessage("El nombre debe tener al menos 2 caracteres"),
     body('apellido')
-        .notEmpty().withMessage("Debes completar con un apellido"),
+        .notEmpty().withMessage("Debes completar con un apellido")
+        .isLength({min: 2}).withMessage("El apellido debe tener al menos 2 caracteres"),
     body('email')
         .notEmpty().withMessage("Debes completar con un email")
         .isEmail().withMessage("Debes ingresar un email válido"),

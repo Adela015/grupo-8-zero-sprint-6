@@ -25,6 +25,12 @@
     <form class="form-register" action="/user/register" method="post" enctype="multipart/form-data"> 
         
         
+        <div class="errores-front">
+            <ul>
+
+            </ul>
+        </div>
+
                     <div class="espacioRegister">
                         <label for="nombre" class="label-registro">Nombre:</label>
                         <input class="input-style" type="text" 
@@ -55,7 +61,7 @@
 
                     <div class="espacioRegister">
                         <label for="email" class="label-registro">E-mail:</label>
-                        <input class="input-style" type="email" name="email" id="email" placeholder="example@mail.com" 
+                        <input class="input-style" type="email" name="email" id="email" placeholder="" 
                         class="field"
                         value="<%= locals.oldData ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
@@ -112,5 +118,7 @@
 
     <%- include ('./partials/footer') %> 
 
+
+    <script src="/js/frontValidationRegister.js"></script>
 </body>
 </html>
