@@ -85,6 +85,10 @@ form div label{
     background-color: #e0218a;
 }
 
+div.errores-front{
+    color: red;
+}
+
 @media (min-width: 450px) {
     
 

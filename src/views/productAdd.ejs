@@ -21,6 +21,13 @@
 
     <h1 class="titulo">Agregar Productos</h1>
 
+
+    <div class="errores-front">
+        <ul>
+
+        </ul>
+    </div>
+
     <!--------------------------------FORM---------------------------------->
 
     <div class="contenedor-form">        
@@ -37,7 +44,7 @@
 
             <div class="controlador-form">
                 <label for="artist">Nombre del Artista</label>
-                <input class="input-style" type="text" name="artist" id=artist" required>
+                <input class="input-style" type="text" name="artist" id="artist" required>
             </div>
 
 <!----------------------GENERO ALBUM-------------------------->
@@ -97,6 +104,8 @@
 <!------------------------------FOOTER--------------------------------->
 
     <%- include ('./partials/footer') %>
+
+    <script src="/js/validateProductAdd.js"></script>
 
 </body>
 </html>
